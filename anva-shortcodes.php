@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Anva Shortcodes
+Plugin Name: Anva Shortcodes Pack
 Description: This plugin works in conjuction with the Anva Framework to create Shortcodes for use with the framework to generate content.
 Version: 1.0.0
 Author: Anthuan Vásquez
