@@ -15,7 +15,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 define( 'ANVA_SHORTCODES_PLUGIN_VERSION', '1.0.0' );
 define( 'ANVA_SHORTCODES_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'ANVA_SHORTCODES_PLUGIN_URI', plugin_url_path( __FILE__ ) );
+define( 'ANVA_SHORTCODES_PLUGIN_URI', plugin_dir_url( __FILE__ ) );
 
 // Include shortcodes
 include_once( ANVA_SHORTCODES_PLUGIN_DIR . '/includes/shortcodes.php' );
