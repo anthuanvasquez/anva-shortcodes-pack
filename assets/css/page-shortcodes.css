@@ -1,0 +1,178 @@
+.anva-shcg-wrap {
+  border: 1px solid #eee;
+  margin-top: -6px;
+  padding: 0;
+}
+
+.anva-shcg-wrap:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.anva-shcg-wrap .anva-shcg-fields,
+.anva-shcg-wrap .anva-shcg-section-wrap {
+  float: left;
+}
+
+.anva-shcg-wrap .anva-shcg-fields {
+  width: 25%;
+}
+
+.anva-shcg-wrap .anva-shcg-section-wrap {
+  width: 75%;
+}
+
+.anva-shcg-wrap .anva-shcg-description {
+  background-color: #F7F7F7;
+  border-bottom: 1px solid #EEE;
+  color: #777;
+  margin: 0;
+  padding: 20px 15px;
+}
+
+.anva-shcg-wrap > .select-wrapper {
+  max-width: 54%;
+}
+
+@media (width: 767px) {
+  .anva-shcg-wrap > .select-wrapper {
+    max-width: 100%;
+  }
+}
+
+.anva-shcg-items {
+  background-color: #f3f3f3;
+  padding: 0;
+  border-right: 1px solid #eee;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.anva-shcg-items ul {
+  margin: 0;
+  padding: 0;
+}
+
+.anva-shcg-items li {
+  color: #0073aa;
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  position: relative;
+  padding: 8px 15px;
+}
+
+.anva-shcg-items li:hover {
+  color: #0073aa;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.anva-shcg-attribute:not(input) {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+input.anva-shcg-attribute {
+  border-radius: 0;
+  box-shadow: 0 0 4px #EEE;
+  box-sizing: border-box;
+  color: #666;
+  height: 33px;
+  margin-bottom: 10px;
+  outline: 0;
+  width: 100%;
+}
+
+.anva-shcg-title h3 {
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  margin: 0 -20px 15px;
+  padding: 20px;
+}
+
+.anva-shcg-title h4 {
+  font-size: 14px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.anva-shcg-section-option {
+  margin-bottom: 20px;
+}
+
+.anva-shcg-section-option .anva-shcg-option {
+  margin-bottom: 15px;
+}
+
+.anva-shcg-section-option .anva-shcg-option:last-child {
+  margin-bottom: 0;
+}
+
+.anva-shcg-section-option .anva-shcg-option:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.anva-shcg-section {
+  display: none;
+}
+
+.anva-shcg-section.active {
+  display: block;
+}
+
+.anva-shcg-section .anva-shcg-group {
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 15px;
+  padding: 0 20px 15px;
+}
+
+.anva-shcg-section .anva-shcg-controls {
+  float: left;
+  margin-right: 4%;
+  width: 54%;
+}
+
+.anva-shcg-section .anva-shcg-controls textarea {
+  height: 200px;
+  width: 100%;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.anva-shcg-section .anva-shcg-explain {
+  color: #777;
+  float: left;
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 10px;
+  width: 42%;
+}
+
+.anva-shcg-section .anva-shcg-codearea {
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+  color: #666;
+  font-size: 12px;
+  font-family: monospace, monospace;
+  padding: 20px;
+  width: 100%;
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+
+.anva-shcg-section .anva-textarea-wrap {
+  margin-bottom: 10px;
+}

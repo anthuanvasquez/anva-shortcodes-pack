@@ -1,50 +1,28 @@
 <?php
 
-function anva_clearfix() {
+function anva_shortcode_clearfix() {
 	echo '<div class="clearfix"></div>';
 }
 
 /*
- * Shortcodes
- */
-function anva_shortcodes_setup() {
-	
-	add_shortcode( 'dropcap', 'dropcap_func' );
-	add_shortcode( 'button', 'button_func' );
-	add_shortcode( 'toggle', 'toggle_func' );
-	add_shortcode( 'column_six', 'column_six_func' );
-	add_shortcode( 'column_six_last', 'column_six_last_func' );
-	add_shortcode( 'column_four', 'column_four_func' );
-	add_shortcode( 'column_four_last', 'column_four_last_func' );
-	add_shortcode( 'column_three', 'column_three_func' );
-	add_shortcode( 'column_three_last', 'column_three_last_func' );
-	add_shortcode( 'column_two', 'column_two_func' );
-	add_shortcode( 'column_two_last', 'column_two_last_func' );
-	add_shortcode( 'column_one', 'column_one_func' );
-	add_shortcode( 'column_one_last', 'column_one_last_func' );
-	
-}
-add_filter( 'after_setup_theme', 'anva_shortcodes_setup'  );
-
-/*
  * Dropcap
  */
-function dropcap_func( $atts, $content ) {
+function anva_shortcode_dropcap( $atts, $content ) {
 	extract( shortcode_atts( array(
 		'style' => 1
 	), $atts ));
 	$first_char = substr( $content, 0, 1 );
 	$text_len 	= strlen( $content );
 	$rest_text 	= substr( $content, 1, $text_len );
-	$html  			= '<span class="dropcap">' . $first_char . '</span>';
-	$html 		 .= wpautop( $rest_text );
+	$html       = '<span class="dropcap">' . $first_char . '</span>';
+	$html      .= wpautop( $rest_text );
 	return $html;
 }
 
 /*
  * Buttons
  */
-function button_func( $atts, $content )  {
+function anva_shortcode_button( $atts, $content )  {
 	extract( shortcode_atts( array(
 		'href' => '#',
 		'align' => 'none',
@@ -125,7 +103,7 @@ function button_func( $atts, $content )  {
 /*
  * Six columns
  */
-function column_six_func( $atts, $content ) {
+function anva_shortcode_column_six( $atts, $content ) {
 	$content = wpautop( trim( $content ) );
 	extract(shortcode_atts(array(
 		'class' => '',
@@ -137,7 +115,7 @@ function column_six_func( $atts, $content ) {
 /*
  * Six columns last
  */
-function column_six_last_func( $atts, $content ) {
+function anva_shortcode_column_six_last( $atts, $content ) {
 	$content = wpautop( trim( $content ) );
 	extract(shortcode_atts(array(
 		'class' => '',
@@ -149,7 +127,7 @@ function column_six_last_func( $atts, $content ) {
 /*
  * Four columns
  */
-function column_four_func( $atts, $content ) {
+function anva_shortcode_column_four( $atts, $content ) {
 	$content = wpautop( trim( $content ) );
 	extract(shortcode_atts(array(
 		'class' => '',
@@ -161,7 +139,7 @@ function column_four_func( $atts, $content ) {
 /*
  * Four columns last
  */
-function column_four_last_func( $atts, $content ) {
+function anva_shortcode_column_four_last( $atts, $content ) {
 	$content = wpautop( trim( $content ) );
 	extract(shortcode_atts(array(
 		'class' => '',
@@ -173,7 +151,7 @@ function column_four_last_func( $atts, $content ) {
 /*
  * Three columns
  */
-function column_three_func( $atts, $content ) {
+function anva_shortcode_column_three( $atts, $content ) {
 	$content = wpautop( trim( $content ) );
 	extract(shortcode_atts(array(
 		'class' => '',
@@ -185,7 +163,7 @@ function column_three_func( $atts, $content ) {
 /*
  * Three columns last
  */
-function column_three_last_func( $atts, $content ) {
+function anva_shortcode_column_three_last( $atts, $content ) {
 	$content = wpautop( trim( $content ) );
 	extract(shortcode_atts(array(
 		'class' => '',
@@ -197,7 +175,7 @@ function column_three_last_func( $atts, $content ) {
 /*
  * Two columns
  */
-function column_two_func( $atts, $content ) {
+function anva_shortcode_column_two( $atts, $content ) {
 	$content = wpautop( trim( $content ) );
 	extract(shortcode_atts(array(
 		'class' => '',
@@ -209,7 +187,7 @@ function column_two_func( $atts, $content ) {
 /*
  * Two columns last
  */
-function column_two_last_func( $atts, $content ) {
+function anva_shortcode_column_two_last( $atts, $content ) {
 	$content = wpautop( trim( $content ) );
 	extract(shortcode_atts(array(
 		'class' => '',
@@ -221,7 +199,7 @@ function column_two_last_func( $atts, $content ) {
 /*
  * One column
  */
-function column_one_func( $atts, $content ) {
+function anva_shortcode_column_one( $atts, $content ) {
 	$content = wpautop( trim( $content ) );
 	extract( shortcode_atts( array(
 		'class' => '',
@@ -233,7 +211,7 @@ function column_one_func( $atts, $content ) {
 /*
  * One column last
  */
-function column_one_last_func( $atts, $content ) {
+function anva_shortcode_column_one_last( $atts, $content ) {
 	$content = wpautop( trim( $content ) );
 	extract( shortcode_atts( array(
 		'class' => '',
@@ -246,7 +224,7 @@ function column_one_last_func( $atts, $content ) {
 /*
  * Toggle
  */
-function toggle_func( $atts, $content ) {
+function anva_shortcode_toggle( $atts, $content ) {
 	$content = wpautop( trim( $content ) );
 	extract( shortcode_atts( array(
 		'title' => __( 'Click para Abrir', 'anva-start' ),
@@ -269,7 +247,7 @@ function toggle_func( $atts, $content ) {
 	return $html;
 }
 
-function anva_dropcap( $atts, $content = null ) {
+function anva_shortcode_dropcap( $atts, $content = null ) {
 	// Extract the attributes into variables.
 	extract( shortcode_atts( array(
 		'style' => ''
@@ -476,7 +454,7 @@ function anva_toggle( $atts, $content ) {
 /*
  * Counter
  */
-function anva_counter( $atts, $content = null ) {
+function anva_shortcode_counter( $atts, $content = null ) {
 	
 	$content = wpautop( trim( $content ) );
 	
@@ -528,11 +506,8 @@ function anva_slides( $atts, $content = null ) {
 
 function quote_func($atts, $content) {
 	$return_html = '<blockquote>'.do_shortcode($content).'</blockquote>';
-
 	return $return_html;
 }
-
-
 
 function tg_small_content_func($atts, $content) {
 	extract(shortcode_atts(array(
@@ -2903,9 +2878,6 @@ function tg_divider_func($atts, $content) {
 	return $return_html;
 
 }
-
-
-
 
 function tg_team_func($atts, $content) {
 	remove_filter('the_content', 'pp_formatter', 99);

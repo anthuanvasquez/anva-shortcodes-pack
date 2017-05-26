@@ -1,0 +1,174 @@
+.anva-shcg-wrap {
+    border: 1px solid #eee;
+    margin-top: -6px;
+    padding: 0;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .anva-shcg-fields,
+    .anva-shcg-section-wrap {
+        float: left;
+    }
+
+    .anva-shcg-fields {
+        width: 25%;
+    }
+
+    .anva-shcg-section-wrap {
+        width: 75%;
+    }
+
+    .anva-shcg-description {
+        background-color: #F7F7F7;
+        border-bottom: 1px solid #EEE;
+        color: #777;
+        margin: 0;
+        padding: 20px 15px;
+    }
+
+    > .select-wrapper {
+        max-width: 54%;
+
+        @media (width: 767px) {
+            max-width: 100%;
+        }
+    }
+}
+
+.anva-shcg-items {
+    background-color: #f3f3f3;
+    padding: 0;
+    border-right: 1px solid #eee;
+    user-select: none;
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    li {
+        color: #0073aa;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0;
+        position: relative;
+        padding: 8px 15px;
+
+        &:hover {
+            color: #0073aa;
+            cursor: pointer;
+            background-color: rgba(black, 0.04);
+        }
+    }
+}
+
+.anva-shcg-attribute {
+    &:not(input) {
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
+
+input.anva-shcg-attribute {
+    border-radius: 0;
+    box-shadow: 0 0 4px #EEE;
+    box-sizing: border-box;
+    color: #666;
+    height: 33px;
+    margin-bottom: 10px;
+    outline: 0;
+    width: 100%;
+}
+
+.anva-shcg-title {
+    h3 {
+        font-size: 16px;
+        border-bottom: 1px solid #eee;
+        margin: 0 -20px 15px;
+        padding: 20px;
+    }
+
+    h4 {
+        font-size: 14px;
+        margin-bottom: 15px;
+        margin-top: 0;
+    }
+}
+
+.anva-shcg-section-option {
+    margin-bottom: 20px;
+
+    .anva-shcg-option {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+}
+
+.anva-shcg-section {
+    display: none;
+    
+    &.active {
+        display: block;
+    }
+
+    .anva-shcg-group {
+        box-sizing: border-box;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 15px;
+        padding: 0 20px 15px;
+    }
+
+    .anva-shcg-controls {
+        float: left;
+        margin-right: 4%;
+        width: 54%;
+
+        textarea {
+            height: 200px;
+            width: 100%;
+            padding: 10px;
+            word-wrap: break-word;
+        }
+    }
+
+    .anva-shcg-explain {
+        color: #777;
+        float: left;
+        font-size: 13px;
+        line-height: 18px;
+        margin-bottom: 10px;
+        width: 42%;
+    }
+
+    .anva-shcg-codearea {
+        background-color: #f5f5f5;
+        border: 1px solid #e3e3e3;
+        border-radius: 4px;
+        box-sizing: border-box;
+        box-shadow: inset 0 1px 4px rgba(black, 0.1);
+        color: #666;
+        font-size: 12px;
+        font-family: monospace, monospace;
+        padding: 20px;
+        width: 100%;
+        user-select: all;
+    }
+
+    .anva-textarea-wrap {
+        margin-bottom: 10px;
+    }
+}
