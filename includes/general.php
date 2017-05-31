@@ -85,6 +85,33 @@ function anva_shortcodes_disable_url( $id ) {
 }
 
 /**
+ * Remove tags from content shortcodes.
+ * 
+ * @param  string $content The enclosed content.
+ * @return string $content Content ouput formatted.
+ */
+function anva_shortcode_remove_tags( $content ) {
+	
+	// Shortcodes requiring the fix.
+	$shortcodes = join( '|', array(
+		'toggle',
+		'accordion_wrap',
+		'accordion',
+		'columns',
+	) );
+
+	// Opening tag.
+	$content = preg_replace( "/(<p>)?\[($shortcodes)(\s[^\]]+)?\](<\/p>|<br \/>)?/", "[$2$3]", $content );
+		
+	// Closing tag.
+	$content = preg_replace( "/(<p>)?\[\/($shortcodes)](<\/p>|<br \/>)?/", "[/$2]", $content );
+	
+	return $content;
+}
+add_filter( 'the_content', 'anva_shortcode_remove_tags' );
+
+
+/**
  * Sort shortcode by array key.
  * 
  * @since  1.0.0
