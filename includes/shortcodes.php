@@ -166,7 +166,7 @@ function anva_shortcode_divider( $atts, $content = null ) {
  *
  * @since 1.0.0
  */
-function anva_button( $atts, $content = null ) {
+function anva_shortcode_button( $atts, $content = null ) {
 	
 	extract( shortcode_atts( array(
 		'href'   => '',

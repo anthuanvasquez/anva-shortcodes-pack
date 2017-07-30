@@ -37,15 +37,16 @@ function anva_shortcodes_init() {
 
 	// Add shortcode generator.
 	if ( is_admin() ) {
-		include_once( ANVA_SHORTCODES_PLUGIN_DIR . '/includes/class-anva-shortcodes-generator.php' );
+		include_once( ANVA_SHORTCODES_PLUGIN_DIR . '/includes/class-anva-shortcode-generator.php' );
 
 		// Run generator.
-		Anva_Shortcodes_Generator::instance();
+		Anva_Shortcode_Generator::instance();
 	}
 
 	// Include shortcodes.
 	if ( ! is_admin() || ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
 
+		include_once( ANVA_SHORTCODES_PLUGIN_DIR . '/includes/class-anva-shortcode-columns.php' );
 		include_once( ANVA_SHORTCODES_PLUGIN_DIR . '/includes/shortcodes.php' );
 
 		/**
@@ -72,6 +73,9 @@ function anva_shortcodes_init() {
 		add_shortcode( 'column_two_last', 'anva_shortcode_column_two_last' );
 		add_shortcode( 'column_one', 'anva_shortcode_column_one' );
 		add_shortcode( 'column_one_last', 'anva_shortcode_column_one_last' );
+
+		// Run columns
+		Anva_Shortcode_Columns::instance();
 
 	}
 

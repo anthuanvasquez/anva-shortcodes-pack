@@ -9,7 +9,7 @@
  * @link         https://anthuanvasquez.net
  * @package      AnvaShortcodes
  */
-class Anva_Shortcodes_Generator {
+class Anva_Shortcode_Generator {
 
 	/**
 	 * A single instance of this class.
@@ -89,8 +89,8 @@ class Anva_Shortcodes_Generator {
 			'id'       => 'anva_shortcode_options',
 			'title'    => esc_html__( 'Shortcode Options', 'anva' ),
 			'page'     => array( 'post', 'page', 'portfolio' ),
-			'context'  => 'normal',
-			'priority' => 'normal',
+			'context'  => 'advanced',
+			'priority' => 'default',
 			'desc'     => esc_html__( 'Please select short code from list below then enter short code attributes and click "Generate Shortcode".', 'anva' ),
 		) );
 
